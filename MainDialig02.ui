@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>780</width>
+    <height>507</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QGraphicsView" name="graphicsView">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>60</y>
+      <width>441</width>
+      <height>341</height>
+     </rect>
+    </property>
+    <property name="mouseTracking">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QWidget" name="gridLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>470</x>
+      <y>70</y>
+      <width>251</width>
+      <height>301</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gridLayout">
+     <item row="0" column="0">
+      <widget class="QLCDNumber" name="threshold1_lcd"/>
+     </item>
+     <item row="2" column="0">
+      <widget class="QLCDNumber" name="size_lcd"/>
+     </item>
+     <item row="0" column="1">
+      <widget class="QLineEdit" name="threshold1_edit"/>
+     </item>
+     <item row="1" column="0">
+      <widget class="QLCDNumber" name="threshold2_lcd"/>
+     </item>
+     <item row="2" column="1">
+      <widget class="QLineEdit" name="size_edit"/>
+     </item>
+     <item row="2" column="2">
+      <widget class="QSlider" name="sise_slider">
+       <property name="maximum">
+        <number>260000</number>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QLineEdit" name="threshold2_edit"/>
+     </item>
+     <item row="1" column="2">
+      <widget class="QSlider" name="threshold2_slider">
+       <property name="maximum">
+        <number>254</number>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="2">
+      <widget class="QSlider" name="threshold1_slider">
+       <property name="minimum">
+        <number>0</number>
+       </property>
+       <property name="maximum">
+        <number>254</number>
+       </property>
+       <property name="value">
+        <number>0</number>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="horizontalLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>10</y>
+      <width>431</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <widget class="QLineEdit" name="file_edit"/>
+     </item>
+     <item>
+      <widget class="QPushButton" name="file_button">
+       <property name="text">
+        <string>file</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="horizontalLayoutWidget_2">
+    <property name="geometry">
+     <rect>
+      <x>490</x>
+      <y>390</y>
+      <width>211</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout_2">
+     <item>
+      <widget class="QPushButton" name="cancel_button">
+       <property name="text">
+        <string>cancel</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="exec_button">
+       <property name="text">
+        <string>execute</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>780</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>file</string>
+    </property>
+    <addaction name="actionQuit"/>
+   </widget>
+   <addaction name="menuFile"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionQuit">
+   <property name="text">
+    <string>Quit</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>actionQuit</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>363</x>
+     <y>253</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>threshold1_slider</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>threshold1_lcd</receiver>
+   <slot>display(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>681</x>
+     <y>162</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>502</x>
+     <y>162</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>threshold2_slider</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>threshold2_lcd</receiver>
+   <slot>display(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>681</x>
+     <y>246</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>502</x>
+     <y>246</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>sise_slider</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>size_lcd</receiver>
+   <slot>display(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>681</x>
+     <y>330</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>502</x>
+     <y>330</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>threshold1_edit</sender>
+   <signal>textChanged(QString)</signal>
+   <receiver>threshold1_lcd</receiver>
+   <slot>display(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>589</x>
+     <y>162</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>502</x>
+     <y>162</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>threshold2_edit</sender>
+   <signal>textChanged(QString)</signal>
+   <receiver>threshold2_lcd</receiver>
+   <slot>display(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>589</x>
+     <y>246</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>502</x>
+     <y>246</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>size_edit</sender>
+   <signal>textChanged(QString)</signal>
+   <receiver>size_lcd</receiver>
+   <slot>display(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>589</x>
+     <y>330</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>502</x>
+     <y>330</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
