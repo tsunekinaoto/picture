@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>780</width>
+    <width>781</width>
     <height>507</height>
    </rect>
   </property>
@@ -30,10 +30,10 @@
    <widget class="QWidget" name="gridLayoutWidget">
     <property name="geometry">
      <rect>
-      <x>470</x>
-      <y>70</y>
-      <width>251</width>
-      <height>301</height>
+      <x>460</x>
+      <y>60</y>
+      <width>301</width>
+      <height>281</height>
      </rect>
     </property>
     <layout class="QGridLayout" name="gridLayout">
@@ -107,7 +107,7 @@
       <widget class="QLineEdit" name="file_edit"/>
      </item>
      <item>
-      <widget class="QPushButton" name="file_button">
+      <widget class="QPushButton" name="pushButton">
        <property name="text">
         <string>file</string>
        </property>
@@ -147,7 +147,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>780</width>
+     <width>781</width>
      <height>27</height>
     </rect>
    </property>
@@ -191,12 +191,12 @@
    <slot>display(int)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>681</x>
-     <y>162</y>
+     <x>759</x>
+     <y>157</y>
     </hint>
     <hint type="destinationlabel">
-     <x>502</x>
-     <y>162</y>
+     <x>493</x>
+     <y>160</y>
     </hint>
    </hints>
   </connection>
@@ -207,12 +207,12 @@
    <slot>display(int)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>681</x>
-     <y>246</y>
+     <x>759</x>
+     <y>236</y>
     </hint>
     <hint type="destinationlabel">
-     <x>502</x>
-     <y>246</y>
+     <x>493</x>
+     <y>239</y>
     </hint>
    </hints>
   </connection>
@@ -223,12 +223,12 @@
    <slot>display(int)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>681</x>
-     <y>330</y>
+     <x>759</x>
+     <y>315</y>
     </hint>
     <hint type="destinationlabel">
-     <x>502</x>
-     <y>330</y>
+     <x>493</x>
+     <y>318</y>
     </hint>
    </hints>
   </connection>
@@ -239,12 +239,12 @@
    <slot>display(QString)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>589</x>
-     <y>162</y>
+     <x>642</x>
+     <y>160</y>
     </hint>
     <hint type="destinationlabel">
-     <x>502</x>
-     <y>162</y>
+     <x>493</x>
+     <y>160</y>
     </hint>
    </hints>
   </connection>
@@ -255,12 +255,12 @@
    <slot>display(QString)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>589</x>
-     <y>246</y>
+     <x>642</x>
+     <y>239</y>
     </hint>
     <hint type="destinationlabel">
-     <x>502</x>
-     <y>246</y>
+     <x>493</x>
+     <y>239</y>
     </hint>
    </hints>
   </connection>
@@ -271,12 +271,12 @@
    <slot>display(QString)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>589</x>
-     <y>330</y>
+     <x>642</x>
+     <y>318</y>
     </hint>
     <hint type="destinationlabel">
-     <x>502</x>
-     <y>330</y>
+     <x>493</x>
+     <y>318</y>
     </hint>
    </hints>
   </connection>
