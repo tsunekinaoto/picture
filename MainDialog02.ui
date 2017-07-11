@@ -107,7 +107,7 @@
       <widget class="QLineEdit" name="file_edit"/>
      </item>
      <item>
-      <widget class="QPushButton" name="pushButton">
+      <widget class="QPushButton" name="file_open">
        <property name="text">
         <string>file</string>
        </property>
