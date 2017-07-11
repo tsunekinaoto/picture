@@ -18,16 +18,20 @@ class MainForm(PySide.QtGui.QMainWindow,PySide.QtGui.QDialog):
     def pushButton(self):
         filename = PySide.QtGui.QFileDialog.getOpenFileName(self,'Open file',os.path.expanduser('~')+'/Desktop')
         self.original_pic = filename[0]
+
+        img = Image.open(self.original_pic)
+        img.thumbnail((951,551),Image.ANTIALIAS)
+        img.save('thumb.jpg')
+        thumb_pass = os.path.abspath('thumb.jpg')
+        self.original_pic = thumb_pass
         self.draw(self.original_pic)
 
         
     def gray_pic(self):
-        img = Image.open(str(self.original_pic))
+        img = Image.open(self.original_pic)
         gray_img = img.convert('L')
         gray_img.save('gray.jpg')
-        # gray_pass = PySide.QtGui.QFileDialog.getOpenFileName('gray.jpg')
         gray_pass = os.path.abspath('gray.jpg')
-        print gray_pass
         self.original_pic = gray_pass
         self.draw(self.original_pic)
 
