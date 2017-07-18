@@ -1,7 +1,8 @@
 from PIL import Image
+from PIL import ImageFilter
 
 img = Image.open( 'mauntain_huji.jpg' )
 
-gray_img = img.convert('L')
+gimg = img.filter(ImageFilter.EMBOSS)
 
-gray_img.save( 'gray.jpg' )
+gimg.save( 'moza.jpg' )
